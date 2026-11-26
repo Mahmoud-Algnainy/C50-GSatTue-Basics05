@@ -32,10 +32,16 @@ namespace C50_GSatTue_Basics05
             #region Question 04
             //Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book,
             //assign it Genre.Science, and print it.
-            Book zahra = new Book();
-            zahra.BookGenre = Genre.Science;
-            Console.WriteLine(zahra.BookGenre);
+            //Book zahra = new Book();
+            //zahra.BookGenre = Genre.Science;
+            //Console.WriteLine(zahra.BookGenre);
 
+            #endregion
+            #region Question 05
+            //Using the Genre enum above, print the underlying int value of Genre.Fiction, Genre.NonFiction, and Genre.Science by casting each to int.
+            Console.WriteLine((int)Genre.Fiction);
+            Console.WriteLine((int)Genre.NonFiction);
+            Console.WriteLine((int)Genre.Science);
             #endregion
         }
     }
