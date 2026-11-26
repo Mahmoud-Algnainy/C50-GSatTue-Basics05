@@ -8,6 +8,7 @@ namespace C50_GSatTue_Basics05
     {
         private string password = "secret";
         internal int copiesInStock = 5;
+        public string Title;
 
     }
 }

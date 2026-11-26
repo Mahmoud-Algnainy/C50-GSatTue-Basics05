@@ -17,9 +17,16 @@ namespace C50_GSatTue_Basics05
             #endregion
             #region Question 02
             //Add an internal int copiesInStock = 5; field to Book. Print it from Main. Does it compile? Why ?
-            Book zahra = new Book();
-            Console.WriteLine(zahra.copiesInStock);
+            //Book zahra = new Book();
+            //Console.WriteLine(zahra.copiesInStock);
             // it compiles because the copiesInStock field is internal and can be accessed inside the same project.
+
+            #endregion
+            #region Question 03
+            //Add a public string Title; field to Book. Set it and print it from Main.
+            Book zahra = new Book();
+            zahra.Title = "Zahra SE01";
+            Console.WriteLine(zahra.Title);
 
             #endregion
         }
