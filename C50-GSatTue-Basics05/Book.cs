@@ -4,11 +4,13 @@ using System.Text;
 
 namespace C50_GSatTue_Basics05
 {
+    enum Genre { Fiction, NonFiction, Science }   
     internal class Book
     {
         private string password = "secret";
         internal int copiesInStock = 5;
         public string Title;
+        public Genre BookGenre { get; set; }
 
     }
 }

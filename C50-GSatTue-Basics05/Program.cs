@@ -24,9 +24,17 @@ namespace C50_GSatTue_Basics05
             #endregion
             #region Question 03
             //Add a public string Title; field to Book. Set it and print it from Main.
+            //Book zahra = new Book();
+            //zahra.Title = "Zahra SE01";
+            //Console.WriteLine(zahra.Title);
+
+            #endregion
+            #region Question 04
+            //Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book,
+            //assign it Genre.Science, and print it.
             Book zahra = new Book();
-            zahra.Title = "Zahra SE01";
-            Console.WriteLine(zahra.Title);
+            zahra.BookGenre = Genre.Science;
+            Console.WriteLine(zahra.BookGenre);
 
             #endregion
         }
