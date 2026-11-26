@@ -39,9 +39,16 @@ namespace C50_GSatTue_Basics05
             #endregion
             #region Question 05
             //Using the Genre enum above, print the underlying int value of Genre.Fiction, Genre.NonFiction, and Genre.Science by casting each to int.
-            Console.WriteLine((int)Genre.Fiction);
-            Console.WriteLine((int)Genre.NonFiction);
-            Console.WriteLine((int)Genre.Science);
+            //Console.WriteLine((int)Genre.Fiction);
+            //Console.WriteLine((int)Genre.NonFiction);
+            //Console.WriteLine((int)Genre.Science);
+            #endregion
+            #region Question 06
+            //Given int genreNumber = 1;, cast it into a Genre value and print the result.
+            int genreNumber = 1;
+            Genre genre = (Genre)genreNumber;
+            Console.WriteLine(genre);
+
             #endregion
         }
     }
