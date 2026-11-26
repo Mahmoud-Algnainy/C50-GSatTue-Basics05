@@ -45,9 +45,15 @@ namespace C50_GSatTue_Basics05
             #endregion
             #region Question 06
             //Given int genreNumber = 1;, cast it into a Genre value and print the result.
-            int genreNumber = 1;
-            Genre genre = (Genre)genreNumber;
-            Console.WriteLine(genre);
+            //int genreNumber = 1;
+            //Genre genre = (Genre)genreNumber;
+            //Console.WriteLine(genre);
+
+            #endregion
+            #region Question 07
+            //Given Genre genre = Genre.Fiction;, convert it into a string using ToString() and print it.
+            Genre genre = Genre.Fiction;
+            Console.WriteLine(genre.ToString());
 
             #endregion
         }
