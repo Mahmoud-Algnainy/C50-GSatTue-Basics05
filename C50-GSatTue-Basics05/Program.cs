@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using C50_GSatTue_Basics05.Enum;
+using Microsoft.VisualBasic;
 using System.Drawing;
 
 namespace C50_GSatTue_Basics05
@@ -66,15 +67,84 @@ namespace C50_GSatTue_Basics05
             #endregion
             #region Question 09
             //Given string genreText = "Mystery"; (not a valid Genre value), use Enum.TryParse() to attempt the conversion.Print "Unknown genre" if it fails.
-            string genreText = "xyz";
-            if (Enum.TryParse(genreText, out Genre genre))
+            //string genreText = "xyz";
+            //if (Enum.TryParse(genreText, out Genre genre))
+            //{
+            //    Console.WriteLine(genre);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Unknown genre");
+            //}
+            #endregion
+            #region Question 10
+            //session Task
+            Member member = new Member();
+            bool isValid;
+            string line = new string('-', 33);
+
+            int id;
+            do
             {
-                Console.WriteLine(genre);
-            }
-            else
+                Console.Write("Enter Id: ");
+                isValid = int.TryParse(Console.ReadLine(), out id) && id > 0;
+            } while (!isValid);
+            member.Id = id;
+            Console.WriteLine(line);
+
+            string? name;
+            do
             {
-                Console.WriteLine("Unknown genre");
-            }
+                Console.Write("Enter Name: ");
+                name = Console.ReadLine();
+                isValid = !string.IsNullOrWhiteSpace(name);
+            } while (!isValid);
+            member.Name = name!;
+            Console.WriteLine(line);
+
+            int age;
+            do
+            {
+                Console.Write("Enter Age: ");
+                isValid = int.TryParse(Console.ReadLine(), out age) && age >= 16 && age <= 50;
+            } while (!isValid);
+            member.Age = age;
+            Console.WriteLine(line);
+
+            int gender;
+            do
+            {
+                Console.WriteLine("Choose Gender:");
+                Console.WriteLine("1. Male");
+                Console.WriteLine("2. Female");
+                Console.Write("Choice: ");
+                isValid = int.TryParse(Console.ReadLine(), out gender) && (gender == 1 || gender == 2);
+            } while (!isValid);
+            member.Gender = (Gender)gender;
+            Console.WriteLine(line);
+
+            int type;
+            do
+            {
+                Console.WriteLine("Choose Membership Type:");
+                Console.WriteLine("1. Standard");
+                Console.WriteLine("2. Premium");
+                Console.Write("Choice: ");
+                isValid = int.TryParse(Console.ReadLine(), out type) && (type == 1 || type == 2);
+            } while (!isValid);
+            member.MembershipType = (MembershipType)type;
+
+            member.MembershipPrice = member.MembershipType == MembershipType.Standard ? 500 : 700;
+
+            Console.WriteLine("\n");
+            Console.WriteLine("===== Member Data =====");
+            Console.WriteLine($"Id: {member.Id}");
+            Console.WriteLine($"Name: {member.Name}");
+            Console.WriteLine($"Age: {member.Age}");
+            Console.WriteLine($"Gender: {member.Gender.ToString().ToLower()}");
+            Console.WriteLine($"Membership: {member.MembershipType}");
+            Console.WriteLine($"Membership Price: {member.MembershipPrice}");
+
             #endregion
         }
     }
